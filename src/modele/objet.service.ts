@@ -7,7 +7,7 @@ import { retry, catchError } from 'rxjs/operators';
 @Injectable({
     providedIn: "root"
 })
-export class ExerciseObject{
+export class ExerciceObject{
 
     baseUrl = 'http://localhost:3000';
 
@@ -21,7 +21,7 @@ export class ExerciseObject{
     }
 
     //methode GET
-    GetStudent(): Observable<Exercice>{
+    get(): Observable<Exercice>{
         return this.http.get<Exercice>(this.baseUrl +'/Exercice')
         .pipe(
             retry(1), catchError(this.errorHandl)
@@ -29,21 +29,21 @@ export class ExerciseObject{
     }
 
     //
-    PutStudent(body: Exercice): Observable<Exercice>{
+    put(body: Exercice): Observable<Exercice>{
         return this.http.put<Exercice>(this.baseUrl +'/Exercice', body)
         .pipe(
             retry(1), catchError(this.errorHandl)
         )
     }
 
-    PostStudent(body: Exercice): Observable<Exercice>{
+    post(body: Exercice): Observable<Exercice>{
         return this.http.post<Exercice>(this.baseUrl +'/Exercice', body)
         .pipe(
             retry(1), catchError(this.errorHandl)
         )
     }
 
-    DeleteStudent(id: number): Observable<Exercice>{
+    delete(id: number): Observable<Exercice>{
         return this.http.delete<Exercice>(this.baseUrl +'/Exercice/' + id)
         .pipe(
             retry(1), catchError(this.errorHandl)
