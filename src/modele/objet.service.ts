@@ -9,24 +9,18 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class ExerciseObject{
 
-
     baseUrl = 'http://localhost:3000';
 
-    constructor(private http: HttpClient){
-
-    }
-
+    constructor(private http: HttpClient) {}
 
     //formatage http Headers
-
-    httpOpions={
+    httpOpions = {
         headers : new HttpHeaders({
             'Content-Type': 'application/json'
         })
     }
 
     //methode GET
-
     GetStudent(): Observable<Exercice>{
         return this.http.get<Exercice>(this.baseUrl +'/Exercise')
         .pipe(
@@ -34,8 +28,9 @@ export class ExerciseObject{
         )
     }
 
-    errorHandl(error){
+    //
 
+    errorHandl(error){
         let errorMessage = '';
         if(error.error instanceof ErrorEvent){
             errorMessage = error.error.message;
