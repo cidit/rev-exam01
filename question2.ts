@@ -56,5 +56,3 @@ class Composition2 {
     getY() { return this.y; }
     setY(y: number) { this.y = y; }
 }
-
-//Question 3
