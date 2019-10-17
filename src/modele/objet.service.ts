@@ -29,21 +29,21 @@ export class ExerciseObject{
     }
 
     //
-    PutStudent(body): Observable<Exercice>{
+    PutStudent(body: Exercice): Observable<Exercice>{
         return this.http.put<Exercice>(this.baseUrl +'/Exercice', body)
         .pipe(
             retry(1), catchError(this.errorHandl)
         )
     }
 
-    PostStudent(body): Observable<Exercice>{
+    PostStudent(body: Exercice): Observable<Exercice>{
         return this.http.post<Exercice>(this.baseUrl +'/Exercice', body)
         .pipe(
             retry(1), catchError(this.errorHandl)
         )
     }
 
-    DeleteStudent(id): Observable<Exercice>{
+    DeleteStudent(id: number): Observable<Exercice>{
         return this.http.delete<Exercice>(this.baseUrl +'/Exercice/' + id)
         .pipe(
             retry(1), catchError(this.errorHandl)
