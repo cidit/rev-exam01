@@ -30,21 +30,21 @@ export class ExerciseObject {
 
     //methode PUT
     PutStudent(): Observable<Exercice> {
-        return this.http.get<Exercice>(this.baseUrl + '/Exercise')
+        return this.http.put<Exercice>(this.baseUrl + '/Exercise', '')
             .pipe(
                 retry(1), catchError(this.errorHandl)
             )
     }
     //methode POST
     PostStudent(): Observable<Exercice> {
-        return this.http.get<Exercice>(this.baseUrl + '/Exercise')
+        return this.http.post<Exercice>(this.baseUrl + '/Exercise', '')
             .pipe(
                 retry(1), catchError(this.errorHandl)
             )
     }
     //methode DELETE
     DeleteStudent(): Observable<Exercice> {
-        return this.http.get<Exercice>(this.baseUrl + '/Exercise')
+        return this.http.delete<Exercice>(this.baseUrl + '/Exercise')
             .pipe(
                 retry(1), catchError(this.errorHandl)
             )
