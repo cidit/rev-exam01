@@ -1,0 +1,14 @@
+REVISION EXAMEN 01
+==================
+
+## Question-01
+un projet angular est centr/e sur 
+*) le composent "app" : le composentracine du projet
+*) app.module.ts : le fichier qui decrit les modules (les imports, etc)
+*) index.html : le fichier sur lequel tout s'affiche (single-gpage application)
+*) package.json : le fichier qui gere les dependences de node
+*) tsconfig.json : le fichier de configuration de typescript
+
+## Question-02
+
+# Question-03
