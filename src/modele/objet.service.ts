@@ -36,8 +36,8 @@ export class ExerciceObject{
         )
     }
 
-    post(body: Exercice): Observable<Exercice>{
-        return this.http.post<Exercice>(this.baseUrl +'/Exercice', body)
+    post(id: number, body: Exercice): Observable<Exercice>{
+        return this.http.post<Exercice>(this.baseUrl +'/Exercice/' + id, body)
         .pipe(
             retry(1), catchError(this.errorHandl)
         )
