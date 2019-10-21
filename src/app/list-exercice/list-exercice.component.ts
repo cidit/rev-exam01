@@ -17,7 +17,7 @@ export class ListExerciceComponent implements OnInit {
   loadObjects(){
     return this.exerciceObjet.get().subscribe((data: {}) => {
       this.exemples = data;
-    })
+    });
   }
 
 }

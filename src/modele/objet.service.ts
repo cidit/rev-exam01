@@ -20,7 +20,7 @@ export class ExerciceObject{
         })
     }
 
-    //methode GET
+    //methode GET (read)
     get(): Observable<Exercice>{
         return this.http.get<Exercice>(this.baseUrl +'/Exercice')
         .pipe(
@@ -28,7 +28,7 @@ export class ExerciceObject{
         )
     }
 
-    //
+    // methode PUT (create)
     put(body: Exercice): Observable<Exercice>{
         return this.http.put<Exercice>(this.baseUrl +'/Exercice', body)
         .pipe(
@@ -36,6 +36,7 @@ export class ExerciceObject{
         )
     }
 
+    // methode POST (modify)
     post(id: number, body: Exercice): Observable<Exercice>{
         return this.http.post<Exercice>(this.baseUrl +'/Exercice/' + id, body)
         .pipe(
@@ -43,6 +44,7 @@ export class ExerciceObject{
         )
     }
 
+    // methode DELETE (remove)
     delete(id: number): Observable<Exercice>{
         return this.http.delete<Exercice>(this.baseUrl +'/Exercice/' + id)
         .pipe(
